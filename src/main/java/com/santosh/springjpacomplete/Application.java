@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-@EnableJpaRepositories
+@EnableJpaRepositories(basePackages = { "com.santosh.springjpacomplete.repository" })
 @EntityScan(basePackages = { "com.santosh.springjpacomplete.model" })
 @SpringBootApplication(scanBasePackages = { "com.santosh" })
 public class Application {
