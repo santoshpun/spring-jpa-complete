@@ -29,7 +29,7 @@ public class Task {
 	private Integer taskCompleted;
 
 	@JoinColumn(name = "project_id", referencedColumnName = "id")
-	@ManyToOne()
+	@ManyToOne(fetch = FetchType.EAGER)
 	private Project project;
 
 	@OneToMany(mappedBy = "task", fetch = FetchType.EAGER)
